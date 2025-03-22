@@ -22,6 +22,10 @@ mongoose.connect(process.env.MONGO_URL)
 app.use('/user', userRouter);
 app.use('/renter', renterRouter);
 
+app.user('/',(req,res))=>{
+
+    res.send("welcome to test the web");
+}
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
